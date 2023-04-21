@@ -18,8 +18,8 @@ from helpers import generate_truth, simulate_data
 #---------- Simulate Ellipsoid-Gaussian data ----------#
 """
 Parameters:
-	* p: dimension
-	* k: dimension of ellipsoid (k <= p with k = p if k not specified)
+  * p: dimension
+  * k: dimension of ellipsoid (k <= p with k = p if k not specified)
   * tau: measure of spread (tau >= 0)
   * axis_ratio: ratio of longest and shortest axes of ellipse
   * noise_level: as a fraction of longest axis diameter
