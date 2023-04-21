@@ -30,7 +30,7 @@ fit = ctef(X)
 Lambda = fit['Lambda']
 center = fit['center']
 ```
-The ctef outputs Lambda and center yield the ellipsoid $\{\Lambda\eta+c : \lVert\eta\rVert=1\}$ fitted to X pictured below.
+The ctef outputs Lambda and center yield the ellipsoid ${\Lambda\eta+c : \lVert\eta\rVert=1}$ fitted to X pictured below. Note the output of simulate_data is random, so rerunning this code will produce different data and hence a different ellipsoid of best fit.
 
 ![example](https://user-images.githubusercontent.com/85212572/233739126-20d1280b-212c-4e9f-aa61-3ed898fa561c.png)
 
