@@ -15,7 +15,11 @@ Expanding ctef with all default arguments explicitly expressed,
 ```python
 fit = ctef(X, k=None, w=0.5, w_axis=10, ellipsoid_dimensions=None, trr_params=None)
 ```
-For parameter details see the ctef.py file or our paper.
+The ctef function returns the following dictionary.
+```python
+{'center': avg + V @ c, 'Lambda': V @ R.T @ np.diag(1/a), 'Lambda_inv': np.diag(a) @ R @ V.T, 'result': result}
+```
+For details see the ctef.py file and/or our paper.
 
 ## Simple example
 This example is from the ellipsoid_gaussian.py file in the examples folder. See that file for parameter details.
@@ -30,8 +34,8 @@ fit = ctef(X)
 Lambda = fit['Lambda']
 center = fit['center']
 ```
-The ctef outputs Lambda and center yield the ellipsoid ${\Lambda\eta+c : \lVert\eta\rVert=1}$ fitted to X pictured below. Note the output of simulate_data is random, so rerunning this code will produce different data and hence a different ellipsoid of best fit.
+The outputs Lambda and center yield the ellipsoid $\\{\Lambda\eta+c : \lVert\eta\rVert=1\\}$ fitted to X pictured below. Note the output of simulate_data is random, so rerunning this code will produce different data and hence a different ellipsoid of best fit.
 
-![example](https://user-images.githubusercontent.com/85212572/233739126-20d1280b-212c-4e9f-aa61-3ed898fa561c.png)
+![example](https://user-images.githubusercontent.com/85212572/233739931-876fc8b3-467f-4499-815e-ad9f713f2c6d.png)
 
 
