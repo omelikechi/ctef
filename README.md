@@ -26,6 +26,7 @@ This example is from the ellipsoid_gaussian.py file in the examples folder. See 
 ```python
 p, tau, axis_ratio, noise_level, n_samples = 2, 2, 3, .01, 50
 
+# generate data from Ellipsoid-Gaussian model
 truth = generate_truth(p, tau, axis_ratio)
 X = simulate_data(n_samples, noise_level, truth)
 
