@@ -3,16 +3,18 @@
 Python implementation of Cayley tranform ellipsoid fitting (CTEF).
 
 ## Installation
-To install from PyPI:
+Install from PyPI:
 ```
 pip install ctef
 ```
-To clone from GitHub:
+Clone from GitHub:
 ```
 git clone git@github.com:omelikechi/ctef.git
 ```
 
 ## Usage
+
+### Ellipsoid fitting
 To fit an ellipsoid to data arranged in an n-by-p numpy array X (n = number of samples, p = dimension):
 ```python
 from ctef.ctef import ctef
