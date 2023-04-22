@@ -15,7 +15,7 @@ from sklearn.decomposition import PCA
 
 # local
 # sys.path.append('/Users/omarmelikechi/iCloud/code/research/ellipsoid/ctef')
-from examples.ellipsoid_gaussian.helpers import vmf
+from examples.helpers import vmf
 
 #---------- Loss function ----------#
 # Cayley transform

@@ -4,8 +4,9 @@ with open("README.md", "r") as f:
     long_description = f.read()
 
 setup(
-    name="ctep",
+    name="ctef",
     version="0.0.1",
+    packages=find_packages(),
     description="Cayley transform ellipsoid fitting",
     long_description=long_description,
     long_description_content_type='text/markdown',
