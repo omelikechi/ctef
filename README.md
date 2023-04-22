@@ -13,7 +13,7 @@ To fit an ellipsoid to data arranged in an n-by-p matrix X (n = number of sample
 ```python
 fit = ctef(X)
 ```
-Expanding ctef with all default arguments explicitly expressed:
+With all default arguments explicitly expressed:
 ```python
 fit = ctef(X, k=None, w=0.5, w_axis=10, ellipsoid_dimensions=None, trr_params=None)
 ```
