@@ -5,7 +5,6 @@ Reference:
 """
 
 #---------- Imports ----------#
-# third party
 import numpy as np
 from scipy.optimize import least_squares
 from sklearn.decomposition import PCA

@@ -5,11 +5,9 @@ Most of this code (except ctef_clustering) is taken from
 """
 
 #---------- Imports ----------#
-# standard
 import time
 import warnings
 
-# third party
 from ctef.ctef_clustering import ctef_clustering
 import numpy as np
 import matplotlib.pyplot as plt
