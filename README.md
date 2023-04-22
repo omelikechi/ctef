@@ -14,7 +14,7 @@ Go to local folder containing ctef files and run
 python3 tests/fit2d.py
 ```
 
-## Basic usage
+## Usage
 To fit an ellipsoid to data arranged in an n-by-p matrix X (n = number of samples, p = dimension):
 ```python
 fit = ctef(X)
