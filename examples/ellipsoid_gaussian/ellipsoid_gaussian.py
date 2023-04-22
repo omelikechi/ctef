@@ -10,8 +10,8 @@ import matplotlib.pyplot as plt
 import numpy as np
 
 # local
-sys.path.append('/Users/omarmelikechi/iCloud/code/research/ellipsoid/ctef')
-from ctef import ctef
+sys.path.append('/Users/omarmelikechi/iCloud/code/research/ellipsoid/ctef/')
+from ctef.ctef import ctef
 from helpers import generate_truth, simulate_data
 
 
@@ -27,7 +27,7 @@ Parameters:
 """
 p = 2
 tau = 2
-axis_ratio = 2
+axis_ratio = 3
 noise_level = .01
 n_samples = 50
 
@@ -62,7 +62,7 @@ if p == 2:
   for j in range(n_mesh):
       eta = np.array([x[j],y[j]])
       [x[j],y[j]] = center + Lambda @ eta
-  ax.plot(x, y, alpha=1)
+  ax.plot(x, y, alpha=1, lw=2, color='deepskyblue')
 
 
 if p == 3:
@@ -84,7 +84,8 @@ if p == 3:
   ax.plot_surface(x, y, z,  rstride=4, cstride=4, alpha=.25, color='lime')
 
 
-plt.tight_layout()
+# plt.tight_layout()
+# plt.savefig('example.png')
 plt.show()
 
 
