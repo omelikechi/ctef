@@ -18,7 +18,7 @@ With all default arguments explicitly expressed:
 fit = ctef(X, k=None, w=0.5, w_axis=10, ellipsoid_dimensions=None, trr_params=None)
 ```
 
-## Simple example
+## Example
 From the ellipsoid_gaussian.py file in the examples folder:
 ```python
 from ctef.ctef import ctef
@@ -40,11 +40,7 @@ Lambda, center = fit['Lambda'], fit['center']
 n_mesh = 100
 fig = plt.figure(figsize=(8, 6))
 ax = fig.add_subplot(1, 1, 1)
-
-# data
 ax.scatter(X[:,0], X[:,1], color='black', s=5, alpha=1)
-
-# fit
 theta = np.linspace(0, 2*np.pi, n_mesh)
 x = np.cos(theta)
 y = np.sin(theta)
