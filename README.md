@@ -19,7 +19,7 @@ fit = ctef(X, k=None, w=0.5, w_axis=10, ellipsoid_dimensions=None, trr_params=No
 ```
 
 ## Simple example
-This example is from the ellipsoid_gaussian.py file in the examples folder. See that file for parameter details.
+From the ellipsoid_gaussian.py file in the examples folder:
 ```python
 p, tau, axis_ratio, noise_level, n_samples = 2, 2, 3, .01, 50
 
@@ -29,10 +29,9 @@ X = simulate_data(n_samples, noise_level, truth)
 
 # fit ellipsoid to data X
 fit = ctef(X)
-Lambda = fit['Lambda']
-center = fit['center']
+Lambda, center = fit['Lambda'], fit['center']
 ```
-Lambda and center yield the ellipsoid $\\{\Lambda\eta+c : \lVert\eta\rVert=1\\}$ fitted to X pictured below. Note simulate_data is random, so rerunning this code will produce different data and hence a different ellipsoid of best fit.
+Lambda and center yield the best fit ellipsoid $\\{\Lambda\eta+c : \lVert\eta\rVert=1\\}$ pictured below:
 
 ![example](https://user-images.githubusercontent.com/85212572/233739931-876fc8b3-467f-4499-815e-ad9f713f2c6d.png)
 
