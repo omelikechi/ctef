@@ -2,10 +2,6 @@
 
 
 #---------- Imports ----------#
-# standard
-import sys
-
-# third party
 from ctef.ctef import ctef
 from examples.helpers import generate_truth, simulate_data
 import matplotlib.pyplot as plt
@@ -29,16 +25,12 @@ noise_level = .01
 n_samples = 50
 
 truth = generate_truth(p, tau=tau, axis_ratio=axis_ratio)
-Lambda_true = truth['Lambda']
-center_true = truth['center']
-
 X = simulate_data(n_samples, noise_level, truth)
 
 
 #---------- Fit ellipsoid to X with CTEF ----------#
 fit = ctef(X)
-Lambda = fit['Lambda']
-center = fit['center']
+Lambda, center = fit['Lambda'], fit['center']
 
 
 #---------- Plot results ----------#
@@ -78,11 +70,10 @@ if p == 3:
     for jj in range(n_mesh):
       eta = np.array([x[ii,jj],y[ii,jj],z[ii,jj]])
       [x[ii,jj],y[ii,jj],z[ii,jj]] = center + Lambda @ eta
-  ax.plot_surface(x, y, z,  rstride=4, cstride=4, alpha=.25, color='lime')
+  ax.plot_surface(x, y, z,  rstride=4, cstride=4, alpha=.25, color='deepskyblue')
 
 
-# plt.tight_layout()
-# plt.savefig('example.png')
+plt.tight_layout()
 plt.show()
 
 

@@ -1,7 +1,7 @@
 # Clustering
 
 #---------- Imports ----------#
-from ctef import ctef, trr_init
+from ctef.ctef import ctef, trr_init
 import numpy as np
 from sklearn.cluster import KMeans
 
