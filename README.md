@@ -21,9 +21,11 @@ fit = ctef(X, k=None, w=0.5, w_axis=10, ellipsoid_dimensions=None, trr_params=No
 ```
 
 ## Example
-Several examples are available in the examples folder. To open a Google Colab version of ellipsoid_gaussian.py, click here: <a target="_blank" href="https://colab.research.google.com/github/omelikechi/ctef/blob/main/examples/ellipsoid_gaussian.ipynb">
+Open ellipsoid_gaussian.py in Google Colab: <a target="_blank" href="https://colab.research.google.com/github/omelikechi/ctef/blob/main/examples/ellipsoid_gaussian.ipynb">
   <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/>
 </a>
+
+Several examples are available in the examples folder. A 2d version of ellipsoid_gaussian.py:
 
 ```python
 from ctef.ctef import ctef
