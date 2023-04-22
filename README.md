@@ -21,6 +21,11 @@ fit = ctef(X, k=None, w=0.5, w_axis=10, ellipsoid_dimensions=None, trr_params=No
 ## Simple example
 From the ellipsoid_gaussian.py file in the examples folder:
 ```python
+from ctef.ctef import ctef
+from examples.helpers import generate_truth, simulate_data
+import matplotlib.pyplot as plt
+import numpy as np
+
 p, tau, axis_ratio, noise_level, n_samples = 2, 2, 3, .01, 50
 
 # generate data from Ellipsoid-Gaussian model
