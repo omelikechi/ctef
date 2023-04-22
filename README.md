@@ -2,12 +2,14 @@
 
 Python implementation of Cayley tranform ellipsoid fitting (CTEF).
 
-The main algorithm is in the ctef.py file.
-
-The main function is ctef in the ctef.py file.
+## Installation
+To install from PyPI:
+```
+pip install ctef
+```
 
 ## Basic usage
-To fit an ellipsoid to data arranged in an n-by-p data matrix X (n = number of samples, p = dimension):
+To fit an ellipsoid to data arranged in an n-by-p matrix X (n = number of samples, p = dimension):
 ```python
 fit = ctef(X)
 ```
@@ -15,11 +17,6 @@ Expanding ctef with all default arguments explicitly expressed:
 ```python
 fit = ctef(X, k=None, w=0.5, w_axis=10, ellipsoid_dimensions=None, trr_params=None)
 ```
-The ctef function returns the following dictionary.
-```python
-{'center': avg + V @ c, 'Lambda': V @ R.T @ np.diag(1/a), 'Lambda_inv': np.diag(a) @ R @ V.T, 'result': result}
-```
-For details see the ctef.py file and/or our paper.
 
 ## Simple example
 This example is from the ellipsoid_gaussian.py file in the examples folder. See that file for parameter details.
@@ -40,6 +37,6 @@ Lambda and center yield the ellipsoid $\\{\Lambda\eta+c : \lVert\eta\rVert=1\\}$
 ![example](https://user-images.githubusercontent.com/85212572/233739931-876fc8b3-467f-4499-815e-ad9f713f2c6d.png)
 
 ## Clustering
-ctef_clustering.py in the clustering folder implements our ellipsoid clustering algorithm. This algorithm is tested against other clustering algorithms on two toy examples in the compare.py file. Here is its output.
+ctef_clustering.py in the ctef folder implements our ellipsoid clustering algorithm. This algorithm is tested against other clustering algorithms on two toy examples in the compare.py file. Here is its output.
 
 ![compare](https://user-images.githubusercontent.com/85212572/233740865-d516c1d9-9d43-4234-8a47-d33a4f67f052.png)
