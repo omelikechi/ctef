@@ -15,7 +15,7 @@ from sklearn.decomposition import PCA
 
 # local
 # sys.path.append('/Users/omarmelikechi/iCloud/code/research/ellipsoid/ctef')
-from examples.helpers import vmf
+# from examples.helpers import vmf
 
 #---------- Loss function ----------#
 # Cayley transform
@@ -224,15 +224,15 @@ def vmf_mle(X, Lambda_inv, center):
     return mu_hat, tau_hat
 
 
-#---------- Draw samples ----------#
-"""
-Input: center, mu, tau, ax_lengths, U, n_samples
-Output: samples from center + Lambda @ eta where Lambda = U^T @ diag(1/ax_lengths)
-"""
-def samples(center, mu, tau, Lambda, n_samples):
-    samples = vmf(mu, tau, n_samples).T
+# #---------- Draw samples ----------#
+# """
+# Input: center, mu, tau, ax_lengths, U, n_samples
+# Output: samples from center + Lambda @ eta where Lambda = U^T @ diag(1/ax_lengths)
+# """
+# def samples(center, mu, tau, Lambda, n_samples):
+#     samples = vmf(mu, tau, n_samples).T
 
-    return (Lambda @ samples).T + center
+#     return (Lambda @ samples).T + center
 
 
 #---------- Error ----------#

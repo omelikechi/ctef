@@ -10,24 +10,19 @@ import sys
 import time
 
 # third party
+from ctef.ctef import ctef
 import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
 from sklearn.decomposition import PCA
 from sklearn.preprocessing import scale
 
-# local
-sys.path.append('/Users/omarmelikechi/iCloud/code/research/ellipsoid/ctef')
-from ctef import ctef
-
 
 #---------- Data ----------#
-phase = np.load('./phase.npy', allow_pickle=True)
+phase = np.load("datasets/cell_phase.npy", allow_pickle=True)
 
 # 40 indicates the 40 core cell cycle features have been selected
-X = np.load('./40.npy')
-
-#-- process data --#
+X = np.load("datasets/cell_cycle.npy")
 
 # column 36 of X has nan values
 X = np.delete(X, obj=36, axis=1)
@@ -58,9 +53,9 @@ X_outliersRemoved = np.delete(X, outlier_idx, axis=0)
 
 
 #---------- Ellipsoid fit ----------#
-# fit = ctef(X_outliersRemoved)
+fit = ctef(X_outliersRemoved)
 # np.save('fit.npy', fit)
-fit = np.load('fit.npy', allow_pickle=True).item()
+# fit = np.load('fit.npy', allow_pickle=True).item()
 
 result = fit['result']
 center = fit['center']
@@ -132,7 +127,7 @@ for i in range(m):
 ax.plot_surface(x, y, z,  rstride=4, cstride=4, color='gray', alpha=.1)
 
 leg = ax.legend(loc=(.8,.5), markerscale=2)
-for lh in leg.legendHandles: 
+for lh in leg.legend_handles: 
 	lh.set_alpha(1)
 ax.view_init(elev=5, azim=30)
 

@@ -6,13 +6,10 @@
 import sys
 
 # third party
+from ctef.ctef import ctef
+from examples.helpers import generate_truth, simulate_data
 import matplotlib.pyplot as plt
 import numpy as np
-
-# local
-sys.path.append('/Users/omarmelikechi/iCloud/code/research/ellipsoid/ctef/')
-from ctef.ctef import ctef
-from helpers import generate_truth, simulate_data
 
 
 #---------- Simulate Ellipsoid-Gaussian data ----------#
@@ -26,8 +23,8 @@ Parameters:
   * n_samples: number of data points
 """
 p = 2
-tau = 2
-axis_ratio = 3
+tau = 1
+axis_ratio = 2
 noise_level = .01
 n_samples = 50
 

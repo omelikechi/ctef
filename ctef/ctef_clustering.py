@@ -5,12 +5,13 @@
 import sys
 
 # third party
+from ctef.ctef import ctef, trr_init
 import numpy as np
 from sklearn.cluster import KMeans
 
-# local
-sys.path.append('/Users/omarmelikechi/iCloud/code/research/ellipsoid/ctef')
-from ctef import ctef, trr_init
+# # local
+# sys.path.append('/Users/omarmelikechi/iCloud/code/research/ellipsoid/ctef')
+# from ctef import ctef, trr_init
 
 
 #---------- Residual distance ----------#

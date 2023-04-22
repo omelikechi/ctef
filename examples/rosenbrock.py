@@ -2,21 +2,15 @@
 
 
 #---------- Imports ----------#
-# standard
-import sys
-
 # third party
+from ctef.ctef import ctef
 import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
 
-# local
-import sys
-sys.path.append('/Users/omarmelikechi/iCloud/code/research/ellipsoid/ctef')
-from ctef import ctef 
 
 #---------- Import data ----------#
-X = pd.read_csv("train.csv")
+X = pd.read_csv("datasets/rosenbrock.csv")
 X = X.to_numpy()[:,1:]
 n, p = X.shape
 
