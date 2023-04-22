@@ -5,17 +5,11 @@ Reference:
 """
 
 #---------- Imports ----------#
-# standard
-import sys
-
 # third party
 import numpy as np
 from scipy.optimize import least_squares
 from sklearn.decomposition import PCA
 
-# local
-# sys.path.append('/Users/omarmelikechi/iCloud/code/research/ellipsoid/ctef')
-# from examples.helpers import vmf
 
 #---------- Loss function ----------#
 # Cayley transform
