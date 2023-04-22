@@ -21,6 +21,9 @@ fit = ctef(X, k=None, w=0.5, w_axis=10, ellipsoid_dimensions=None, trr_params=No
 ```
 
 ## Example
+[click here](<a target="_blank" href="https://colab.research.google.com/github/omelikechi/ctef/blob/main/examples/ellipsoid_gaussian.ipynb">
+  <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/>
+</a>)
 From the ellipsoid_gaussian.py file in the examples folder:
 ```python
 from ctef.ctef import ctef
