@@ -7,6 +7,10 @@ To install from PyPI:
 ```
 pip install ctef
 ```
+To clone from GitHub:
+```
+git clone git@github.com:omelikechi/ctef.git
+```
 
 ## Usage
 To fit an ellipsoid to data arranged in an n-by-p numpy array X (n = number of samples, p = dimension):
