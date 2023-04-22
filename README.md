@@ -1,4 +1,4 @@
-# Cayley tranform ellispoid fitting (CTEF)
+# Cayley transform ellispoid fitting (CTEF)
 
 Python implementation of Cayley tranform ellipsoid fitting (CTEF).
 
