@@ -35,6 +35,25 @@ X = simulate_data(n_samples, noise_level, truth)
 # fit ellipsoid to data X
 fit = ctef(X)
 Lambda, center = fit['Lambda'], fit['center']
+
+# plot result
+n_mesh = 100
+fig = plt.figure(figsize=(8, 6))
+ax = fig.add_subplot(1, 1, 1)
+
+# data
+ax.scatter(X[:,0], X[:,1], color='black', s=5, alpha=1)
+
+# fit
+theta = np.linspace(0, 2*np.pi, n_mesh)
+x = np.cos(theta)
+y = np.sin(theta)
+for j in range(n_mesh):
+    eta = np.array([x[j],y[j]])
+    [x[j],y[j]] = center + Lambda @ eta
+ax.plot(x, y, alpha=1, lw=2, color='deepskyblue')
+
+plt.show()
 ```
 Lambda and center yield the best fit ellipsoid $\\{\Lambda\eta+c : \lVert\eta\rVert=1\\}$ pictured below:
 
