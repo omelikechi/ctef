@@ -9,7 +9,7 @@ pip install ctef
 ```
 
 ## Usage
-To fit an ellipsoid to data arranged in an n-by-p matrix X (n = number of samples, p = dimension):
+To fit an ellipsoid to data arranged in an n-by-p numpy array X (n = number of samples, p = dimension):
 ```python
 from ctef.ctef import ctef
 
