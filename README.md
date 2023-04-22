@@ -17,6 +17,7 @@ To fit an ellipsoid to data arranged in an n-by-p numpy array X (n = number of s
 ```python
 from ctef.ctef import ctef
 
+X = np.load('PATH_TO_DATA/X.npy')
 fit = ctef(X)
 ```
 With all arguments (and their default values) explicitly expressed:
