@@ -5,7 +5,7 @@ with open("README.md", "r") as f:
 
 setup(
     name="ctef",
-    version="0.0.1",
+    version="0.0.3",
     packages=find_packages(),
     description="Cayley transform ellipsoid fitting",
     long_description=long_description,
