@@ -15,7 +15,7 @@ git clone git@github.com:omelikechi/ctef.git
 ## Usage
 
 ### Ellipsoid fitting
-To fit an ellipsoid to data arranged in an n-by-p numpy array X (n = number of samples, p = dimension):
+Fit an ellipsoid to data arranged in an n-by-p numpy array X (n = number of samples, p = dimension):
 ```python
 from ctef.ctef import ctef
 
@@ -26,14 +26,21 @@ With all arguments (and their default values) explicitly expressed:
 ```python
 fit = ctef(X, k=None, w=0.5, w_axis=10, ellipsoid_dimensions=None, trr_params=None)
 ```
+The output of ctef, which we have called ```python fit``` is a dictionary:
+```python
+print(fit.keys())
+
+dict_keys(['center', 'Lambda', 'Lambda_inv', 'result'])
+```
 
 ## Example
+Examples are available in the examples folder. Here we highlight a few.
+
 Open ellipsoid_gaussian.py in Google Colab: <a target="_blank" href="https://colab.research.google.com/github/omelikechi/ctef/blob/main/examples/ellipsoid_gaussian.ipynb">
   <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/>
 </a>
 
-Several examples are available in the examples folder. A 2d version of ellipsoid_gaussian.py:
-
+2d version of ellipsoid_gaussian.py:
 ```python
 from ctef.ctef import ctef
 from examples.helpers import generate_truth, simulate_data
