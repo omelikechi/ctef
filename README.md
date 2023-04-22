@@ -26,12 +26,13 @@ With all arguments (and their default values) explicitly expressed:
 ```python
 fit = ctef(X, k=None, w=0.5, w_axis=10, ellipsoid_dimensions=None, trr_params=None)
 ```
-The output of ctef, which we have called ```python fit``` is a dictionary:
+The output of ctef, in this case```fit```, is a dictionary:
 ```python
 print(fit.keys())
 
 dict_keys(['center', 'Lambda', 'Lambda_inv', 'result'])
 ```
+The ellipsoid of best fit is $\mathcal{E} = \\{\Lambda\eta+c : \eta\in\mathbb{R}^k, \lVert\eta\rVert=1\\}$
 
 ## Example
 Examples are available in the examples folder. Here we highlight a few.
