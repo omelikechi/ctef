@@ -31,18 +31,17 @@ print(fit.keys())
 
 dict_keys(['center', 'Lambda', 'Lambda_inv', 'result'])
 ```
-The outputs are:
+The dictionay items are:
   * $c = $```center``` is a p-dimensional numpy array. It is the ellipsoid center.
 
   * $\Lambda = $```Lambda``` is a p-by-k numpy array (matrix). 
 
-  * $\widetilde\Lambda = $```Lambda_inv``` is a k-by-p numpy array (matrix). $\widetilde\Lambda = \Lambda^{-1}$ when $k = p$.
+  * $\widetilde\Lambda = $```Lambda_inv``` is a k-by-p numpy array (matrix). $\widetilde\Lambda = \Lambda^{-1}$ when k = p.
 
   * ```result``` is the output of the [STIR optimization algorithm implemented in scipy](https://docs.scipy.org/doc/scipy/reference/generated/scipy.optimize.least_squares.html)
 
-
+### Ellipsoid of best fit
 **_The ellipsoid of best fit is_** $\mathcal{E} = \\{\Lambda\eta+c : \eta\in\mathbb{R}^k, \lVert\eta\rVert=1\\} = \\{x\in\mathbb{R}^p : \lVert \widetilde\Lambda(x-c)\rVert=1\\}$.
-
 
 ## Example
 Examples are available in the examples folder. Here we highlight ellipsoid_gaussian.py.
