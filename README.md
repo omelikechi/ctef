@@ -14,7 +14,6 @@ git clone git@github.com:omelikechi/ctef.git
 
 ## Usage
 
-### Ellipsoid fitting
 Fit an ellipsoid to data arranged in an n-by-p numpy array X (n = number of samples, p = dimension):
 ```python
 from ctef.ctef import ctef
@@ -38,7 +37,7 @@ $\Lambda = $```Lambda``` is a p-by-k numpy array (matrix).
 
 $\widetilde\Lambda = $```Lambda_inv``` is a k-by-p numpy array (matrix). 
 
-When k = p, ```Lambda_inv```$ = \Lambda^{-1}$.
+When k = p, ```Lambda_inv``` $= \Lambda^{-1}$.
 
 ```result``` is the output of the [STIR optimization algorithm implemented in scipy](https://docs.scipy.org/doc/scipy/reference/generated/scipy.optimize.least_squares.html)
 
