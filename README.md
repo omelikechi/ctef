@@ -31,15 +31,15 @@ print(fit.keys())
 
 dict_keys(['center', 'Lambda', 'Lambda_inv', 'result'])
 ```
-$c = $```center``` is a p-dimensional numpy array. It is the ellipsoid center.
+  * $c = $```center``` is a p-dimensional numpy array. It is the ellipsoid center.
 
-$\Lambda = $```Lambda``` is a p-by-k numpy array (matrix). 
+  * $\Lambda = $```Lambda``` is a p-by-k numpy array (matrix). 
 
-$\widetilde\Lambda = $```Lambda_inv``` is a k-by-p numpy array (matrix). 
+  * $\widetilde\Lambda = $```Lambda_inv``` is a k-by-p numpy array (matrix). 
 
-When k = p, ```Lambda_inv``` $= \Lambda^{-1}$.
+    - When k = p, ```Lambda_inv``` $= \Lambda^{-1}$.
 
-```result``` is the output of the [STIR optimization algorithm implemented in scipy](https://docs.scipy.org/doc/scipy/reference/generated/scipy.optimize.least_squares.html)
+  * ```result``` is the output of the [STIR optimization algorithm implemented in scipy](https://docs.scipy.org/doc/scipy/reference/generated/scipy.optimize.least_squares.html)
 
 The ellipsoid of best fit is $\mathcal{E} = \\{\Lambda\eta+c : \eta\in\mathbb{R}^k, \lVert\eta\rVert=1\\} = \\{x\in\mathbb{R}^p : \lVert \widetilde\Lambda(x-c)\rVert=1\\}$.
 
