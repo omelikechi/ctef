@@ -45,9 +45,9 @@ The outputs are:
 ### The ellipsoid of best fit is $\mathcal{E} = \\{\Lambda\eta+c : \eta\in\mathbb{R}^k, \lVert\eta\rVert=1\\} = \\{x\in\mathbb{R}^p : \lVert \widetilde\Lambda(x-c)\rVert=1\\}$.
 
 ## Example
-Examples are available in the examples folder. Here we highlight a few.
+Examples are available in the examples folder. Here we highlight ellipsoid_gaussian.py.
 
-Open ellipsoid_gaussian.py in Google Colab: <a target="_blank" href="https://colab.research.google.com/github/omelikechi/ctef/blob/main/examples/ellipsoid_gaussian.ipynb">
+Open ellipsoid_gaussian.ipynb in Google Colab: <a target="_blank" href="https://colab.research.google.com/github/omelikechi/ctef/blob/main/examples/ellipsoid_gaussian.ipynb">
   <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/>
 </a>
 
