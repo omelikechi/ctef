@@ -3,17 +3,18 @@
 Python implementation of Cayley tranform ellipsoid fitting (CTEF).
 
 ## Installation
-To install from PyPI:
+Install from PyPI:
 ```
 pip install ctef
 ```
-To clone from GitHub:
+Clone from GitHub:
 ```
 git clone git@github.com:omelikechi/ctef.git
 ```
 
 ## Usage
-To fit an ellipsoid to data arranged in an n-by-p numpy array X (n = number of samples, p = dimension):
+
+Fit an ellipsoid to data arranged in an n-by-p numpy array X (n = number of samples, p = dimension):
 ```python
 from ctef.ctef import ctef
 
@@ -24,14 +25,32 @@ With all arguments (and their default values) explicitly expressed:
 ```python
 fit = ctef(X, k=None, w=0.5, w_axis=10, ellipsoid_dimensions=None, trr_params=None)
 ```
+The output of ctef, in this case```fit```, is a dictionary:
+```python
+print(fit.keys())
+
+dict_keys(['center', 'Lambda', 'Lambda_inv', 'result'])
+```
+The dictionay items are:
+  * $c = $```center``` is a p-dimensional numpy array. It is the ellipsoid center.
+
+  * $\Lambda = $```Lambda``` is a p-by-k numpy array (matrix). 
+
+  * $\widetilde\Lambda = $```Lambda_inv``` is a k-by-p numpy array (matrix). $\widetilde\Lambda = \Lambda^{-1}$ when k = p.
+
+  * ```result``` is the output of the [STIR optimization algorithm implemented in scipy](https://docs.scipy.org/doc/scipy/reference/generated/scipy.optimize.least_squares.html)
+
+### Ellipsoid of best fit
+**_The ellipsoid of best fit is_** $\mathcal{E} = \\{\Lambda\eta+c : \eta\in\mathbb{R}^k, \lVert\eta\rVert=1\\} = \\{x\in\mathbb{R}^p : \lVert \widetilde\Lambda(x-c)\rVert=1\\}$.
 
 ## Example
-Open ellipsoid_gaussian.py in Google Colab: <a target="_blank" href="https://colab.research.google.com/github/omelikechi/ctef/blob/main/examples/ellipsoid_gaussian.ipynb">
+Examples are available in the examples folder. Here we highlight ellipsoid_gaussian.py.
+
+Open ellipsoid_gaussian.ipynb in Google Colab: <a target="_blank" href="https://colab.research.google.com/github/omelikechi/ctef/blob/main/examples/ellipsoid_gaussian.ipynb">
   <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/>
 </a>
 
-Several examples are available in the examples folder. A 2d version of ellipsoid_gaussian.py:
-
+2d version of ellipsoid_gaussian.py:
 ```python
 from ctef.ctef import ctef
 from examples.helpers import generate_truth, simulate_data
