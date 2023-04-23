@@ -32,14 +32,15 @@ print(fit.keys())
 
 dict_keys(['center', 'Lambda', 'Lambda_inv', 'result'])
 ```
-```center```, a p-dimensional numpy array, is the ellipsoid center.
+$c = $```center``` is a p-dimensional numpy array. It is the ellipsoid center.
 
-```Lambda``` and ```Lambda_inv``` are p-by-k and k-by-p dimensional numpy arrays (matrices), respectively. When k = p, ```Lambda_inv``` is the inverse of ```Lambda```.
+$\Lambda = $```Lambda``` is a p-by-k numpy array (matrix). 
+
+$\widetilde\Lambda = $```Lambda_inv``` is a k-by-p numpy array (matrix). When k = p, ```Lambda_inv``` is the inverse of ```Lambda```.
 
 ```result``` is the [output of the STIR algorithm implemented in scipy](https://docs.scipy.org/doc/scipy/reference/generated/scipy.optimize.least_squares.html)
 
-
-The ellipsoid of best fit is $\mathcal{E} = \\{\Lambda\eta+c : \eta\in\mathbb{R}^k, \lVert\eta\rVert=1\\}$
+The ellipsoid of best fit is $\mathcal{E} = \\{\Lambda\eta+c : \eta\in\mathbb{R}^k, \lVert\eta\rVert=1\\} = \\{x\in\mathh{R}^p : \lVert \widetilde\Lambda(x-c)\rVert=1\\}$.
 
 ## Example
 Examples are available in the examples folder. Here we highlight a few.
