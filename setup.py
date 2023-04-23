@@ -16,6 +16,8 @@ setup(
     install_requires=[
         "matplotlib",
         "numpy",
+        "scikit-learn",
+        "scipy",
         "tqdm",
     ],
     dependency_links=[],

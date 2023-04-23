@@ -148,8 +148,8 @@ Input:
         applies trr_init function above.
 Output:
     * center: center of fitted ellipsoid
-    * Lambda: factor loading matrix of fitted ellipsoid; equal to Vk @ R^T @ A^{-1}
-    * Lambda_inv: 'inverse' of Lambda; equal to A @ R @ Vk^T
+    * Lambda: factor loading matrix of fitted ellipsoid; equal to V @ R^T @ A^{-1}
+    * Lambda_inv: 'inverse' of Lambda; equal to A @ R @ V^T
     * result: output of STIR algroithm 
         ref: https://docs.scipy.org/doc/scipy/reference/generated/scipy.optimize.least_squares.html
 """

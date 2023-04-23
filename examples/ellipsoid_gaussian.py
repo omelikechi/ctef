@@ -30,6 +30,7 @@ X = simulate_data(n_samples, noise_level, truth)
 
 #---------- Fit ellipsoid to X with CTEF ----------#
 fit = ctef(X)
+print(fit.keys())
 Lambda, center = fit['Lambda'], fit['center']
 
 
