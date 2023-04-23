@@ -36,11 +36,13 @@ $c = $```center``` is a p-dimensional numpy array. It is the ellipsoid center.
 
 $\Lambda = $```Lambda``` is a p-by-k numpy array (matrix). 
 
-$\widetilde\Lambda = $```Lambda_inv``` is a k-by-p numpy array (matrix). When k = p, ```Lambda_inv``` is the inverse of ```Lambda```.
+$\widetilde\Lambda = $```Lambda_inv``` is a k-by-p numpy array (matrix). 
 
-```result``` is the [output of the STIR algorithm implemented in scipy](https://docs.scipy.org/doc/scipy/reference/generated/scipy.optimize.least_squares.html)
+When k = p, ```Lambda_inv```$ = \Lambda^{-1}$.
 
-The ellipsoid of best fit is $\mathcal{E} = \\{\Lambda\eta+c : \eta\in\mathbb{R}^k, \lVert\eta\rVert=1\\} = \\{x\in\mathh{R}^p : \lVert \widetilde\Lambda(x-c)\rVert=1\\}$.
+```result``` is the output of the [STIR optimization algorithm implemented in scipy](https://docs.scipy.org/doc/scipy/reference/generated/scipy.optimize.least_squares.html)
+
+The ellipsoid of best fit is $\mathcal{E} = \\{\Lambda\eta+c : \eta\in\mathbb{R}^k, \lVert\eta\rVert=1\\} = \\{x\in\mathbb{R}^p : \lVert \widetilde\Lambda(x-c)\rVert=1\\}$.
 
 ## Example
 Examples are available in the examples folder. Here we highlight a few.
