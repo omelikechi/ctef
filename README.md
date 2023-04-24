@@ -28,7 +28,7 @@ With all arguments (and their default values) explicitly expressed:
 ```python
 fit = ctef(X, k=None, w=0.5, w_axis=10, ellipsoid_dimensions=None, trr_params=None)
 ```
-The output of ctef, in this case```fit```, is a dictionary:
+The output of ctef, in this case ```fit```, is a dictionary:
 ```python
 print(fit.keys())
 
