@@ -233,8 +233,8 @@ def vmf_mle(X, Lambda_inv, center):
 Input: true center, approximate center, true Lambda matrix, approximate Lambda matrix
 Output: offset error and shape error
 """
-def error(c_true, c_approx, Lambda_true, Lambda_approx):
-    center_error = np.linalg.np.linalg.norm(c_true - c_approx)
+def error(center_true, center_approx, Lambda_true, Lambda_approx):
+    offset_error = np.linalg.norm(center_true - center_approx)
     singular_vals = np.linalg.svd(np.linalg.inv(Lambda_approx) @ Lambda_true)[1]
     shape_error = singular_vals[0]/singular_vals[-1] - 1
 
