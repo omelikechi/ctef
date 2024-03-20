@@ -4,6 +4,7 @@ Python implementation of Cayley tranform ellipsoid fitting (CTEF).
 
 ## Associated paper 
 IEEE Transactions on Signal Processing: [https://ieeexplore.ieee.org/abstract/document/10324847](https://ieeexplore.ieee.org/abstract/document/10324847)
+
 arXiv: [https://arxiv.org/abs/2304.10630](https://arxiv.org/abs/2304.10630)
 
 ## Installation
