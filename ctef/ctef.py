@@ -206,7 +206,7 @@ def vmf_mle(X, Lambda_inv, center):
         v = Lambda_inv @ (X[i,:] - center)
         X_sphere[i,:] = v/np.linalg.norm(v)
 
-    # MLE of direction paprameter
+    # MLE of direction parameter
     mu_hat = np.average(X_sphere, axis=0)
     r_hat = np.linalg.norm(mu_hat)
     mu_hat = mu_hat/r_hat
@@ -215,17 +215,6 @@ def vmf_mle(X, Lambda_inv, center):
     tau_hat = (r_hat * (k - r_hat**2)) / (1 - r_hat**2)
 
     return mu_hat, tau_hat
-
-
-# #---------- Draw samples ----------#
-# """
-# Input: center, mu, tau, ax_lengths, U, n_samples
-# Output: samples from center + Lambda @ eta where Lambda = U^T @ diag(1/ax_lengths)
-# """
-# def samples(center, mu, tau, Lambda, n_samples):
-#     samples = vmf(mu, tau, n_samples).T
-
-#     return (Lambda @ samples).T + center
 
 
 #---------- Error ----------#
